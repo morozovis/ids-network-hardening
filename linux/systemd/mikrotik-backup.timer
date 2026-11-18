@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly MikroTik config backup
+
+[Timer]
+OnCalendar=Mon 03:30
+# Если сервер был выключен в момент запуска - выполнить после включения
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=Weekly MikroTik config backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/mikrotik-backup

@@ -1,0 +1,12 @@
+# /etc/logrotate.d/mikrotik - хранение журналов роутера 90 дней
+/var/log/mikrotik.log {
+  daily
+  rotate 90
+  compress
+  delaycompress
+  missingok
+  notifempty
+  postrotate
+    /usr/lib/rsyslog/rsyslog-rotate
+  endscript
+}
